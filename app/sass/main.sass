@@ -1,0 +1,454 @@
+@import '../libs/bootstrap/dist/css/bootstrap-reboot.css'
+@import '../sass/_fonts'
+body
+  font-family: 'HarmoniaSansProCyr-Regular'
+  color: #11223E
+
+section, .container
+  width: 1000px
+  margin: 0 auto
+  max-width: 100%
+
+.main-table
+  background: #ffffff
+  width: 1100px
+  padding: 85px 0
+  margin: 0 auto
+  box-sizing: border-box
+  max-width: 100%
+
+  &__wrapper
+    background: #FFFFFF
+    border: 1px solid rgba(17, 34, 62, 0.05)
+    box-sizing: border-box
+    border-radius: 5px
+    width: 1080px
+    max-width: 100%
+    padding: 40px
+    max-width: 100%
+    margin: 0 auto
+
+.top-row
+  &__input_search
+    padding: 0
+    margin-right: 20px
+
+  &__input_search input
+    border: 1px solid rgba(34, 62, 105, 0.1)
+    box-sizing: border-box
+    border-radius: 5px
+    width: 240px
+    max-width: 100%
+    font-size: 16px
+    line-height: 11px
+    color: #11223E
+
+    &:focus
+      outline: none
+      border: 2px solid rgba(34, 62, 105, 0.1)
+      box-shadow: none
+
+  &__button-wrapper
+    color: #11223e
+    line-height: 9px
+    border: 1px solid rgba(17, 34, 62, 0.07)
+    box-sizing: border-box
+    border-radius: 5px
+    height: 40px
+    padding: 0
+
+  &__left-button
+    font-size: 14px
+    text-align: center
+    opacity: 0.5
+    background: none
+    border: none
+    width: 50%
+    height: 100%
+
+    &_brs_left
+      border-radius: 5px 0 0 5px
+
+    &_brs_right
+      border-radius: 0 5px 5px 0
+
+    &:focus
+      box-shadow: none
+      outline: none
+
+    &_active
+      border: 1px solid rgba(34, 62, 105, 0.2)
+      opacity: 1
+
+.top-row
+  &__right-button
+    font-size: 16px
+    line-height: 11px
+    border-radius: 5px
+    height: 40px
+    max-width: 100%
+
+  &__button_transparent
+    background: none
+    border: 1px solid rgba(36, 64, 105, 0.2)
+    box-sizing: border-box
+    color: #11223e
+    width: 142px
+    text-align: center
+
+  &__button_red
+    color: #ffffff
+    background: #FC3969
+    box-shadow: 0 3px 7px rgba(252, 57, 105, 0.3)
+    border-radius: 5px
+    border: none
+    width: 170px
+    margin-left: 20px
+
+.second-row
+  border-radius: 5px
+  background: rgba(248, 231, 28, 0.15)
+  height: 40px
+  margin: 30px auto
+
+  &__wrapper
+    width: 100%
+
+  &__scale
+    font-size: 12px
+    line-height: 8px
+    color: #11223e
+    margin-right: 25px
+    height: 18px
+    background: #ffffff
+    position: relative
+    z-index: 1
+    border-radius: 5px
+
+  &__scale_percent
+    position: absolute
+    background: #f8e71c
+    height: 100%
+    width: 45%
+    background-size: 45% 0
+    z-index: -1
+    border-radius: 5px 0 0 5px
+
+  &__result
+    font-size: 14px
+    line-height: 9px
+    opacity: .5
+    color: #11223e
+
+    &:before
+      content: "!"
+      width: 14px
+      height: 14px
+      color: #11223e
+      border: 1px solid #11223E
+      box-sizing: border-box
+      border-radius: 50%
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      margin-right: 10px
+
+.content-table
+  margin: 30px auto
+  padding: 0
+
+  &__wrapper
+    flex-wrap: nowrap
+
+  &__left
+    min-width: 375px
+    max-width: 100%
+
+    .table
+      td, th
+        border: 1px solid rgba(17, 34, 62, 0.2)
+
+      .table__name
+        border-left: none
+
+      .table__checkbox
+        border-right: none
+
+  &__right
+    max-width: 625px
+
+    .table
+      td, th
+        border: 1px solid rgba(17, 34, 62, 0.07)
+        border-left: none
+        max-width: 44px
+        min-width: 44px
+        width: 44px
+        text-align: center
+
+      span
+        display: block
+        position: relative
+
+      &__position_red
+        sup
+          color: #D0021B
+          font-size: 10px
+          top: -7px
+          right: 1px
+          position: absolute
+
+      &__position_red:before
+        content: ""
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-top: 3px solid #D0021B
+        position: absolute
+        top: -7px
+        right: 7px
+
+      &__position_green
+        sup
+          color: #417505
+          font-size: 10px
+          top: -7px
+          right: 1px
+          position: absolute
+
+      &__position_green:before
+        content: ""
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-bottom: 3px solid #417505
+        position: absolute
+        top: -8px
+        right: 7px
+
+      &__position_new:before
+        content: 'new'
+        color: #417505
+        font-size: 10px
+        line-height: 7px
+        position: absolute
+        top: -12px
+        right: 5px
+
+      &__position_bottom
+        font-size: 10px
+        color: #355B08
+        background: rgba(117, 185, 38, 0.3)
+        border-radius: 3px
+        position: absolute !important
+        bottom: -15px
+        left: 0
+        right: 0
+        margin: 0 auto
+        width: 20px
+        height: 11px
+        display: flex !important
+        justify-content: center
+        align-items: center
+
+
+.table
+  td, th
+    height: 50px
+    line-height: 8px
+    max-height: 50px
+    padding: 0
+    vertical-align: middle
+
+  td
+    font-size: 14px
+
+  th
+    font-size: 12px
+    color: rgba(17, 34, 62, 0.3)
+
+
+  &__checkbox
+    text-align: center
+    vertical-align: middle
+
+  &__input
+
+  &__input:checked,
+  &__input:not(:checked)
+    position: absolute
+    left: -9999px
+
+  &__input:checked + label,
+  &__input:not(:checked) + label
+    position: relative
+    cursor: pointer
+    width: 20px
+    height: 20px
+    display: inline-block
+    margin: 0
+    padding: 0 15px
+
+  &__input:checked + label:before,
+  &__input:not(:checked) + label:before
+    content: ""
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 20px
+    height: 20px
+    background-color: rgba(17, 34, 62, 0.1)
+
+  &__input:checked + label:hover:before,
+  &__input:not(:checked) + label:hover:before
+    border: 1px solid #11223E
+    transition: 0.3s all
+
+  &__input:checked + label:before,
+  &__input:not(:checked) + label:before
+    border-radius: 2px
+
+  &__input:checked + label:after,
+  &__input:not(:checked) + label:after
+    content: ""
+    position: absolute
+    -webkit-transition: all 0.2s ease
+    -moz-transition: all 0.2s ease
+    -o-transition: all 0.2s ease
+    transition: all 0.2s ease
+
+
+  &__input:checked + label:after,
+  &__input:not(:checked) + label:after
+    left: 5px
+    top: 5px
+    width: 10px
+    height: 10px
+    background: rgba(17, 34, 62, 0.7)
+
+  &__input:not(:checked) + label:after
+    opacity: 0
+
+  &__input:checked + label:after
+    opacity: 1
+
+  &__name-title
+    display: block
+    position: relative
+    cursor: pointer
+
+    &:after
+      content: ''
+      width: 6px
+      height: 10px
+      display: inline-block
+      text-align: right
+      position: absolute
+      right: 0px
+      background: url("../img/open-icon.png") no-repeat
+      transition: 0.5s all
+      right: 20px
+
+  &__name-title_active:after
+    transform: rotate(90deg)
+
+  &__name svg
+    margin-right: 15px
+    cursor: pointer
+    opacity: 0.3
+    transition: 0.3s all
+
+    &:hover
+      opacity: 1
+
+  &__star
+    display: inline-block
+    position: absolute
+    top: -5px
+    right: 40px
+    background-image: url(../img/sprite.png)
+    background-position: -16px 0px
+    width: 16px
+    height: 17px
+
+    &:hover
+      background-image: url(../img/sprite.png)
+      background-position: 0px 0px
+      width: 16px
+      height: 17px
+
+    &.icon-star_active
+      background-image: url(../img/sprite.png)
+      background-position: 0px -17px
+      width: 14px
+      height: 14px
+
+  &__rating
+    text-align: center
+
+  &__rating_title
+    color: rgba(17, 34, 62, 0.3)
+    line-height: 15px
+    position: relative
+    transition: 0.3s all
+    cursor: pointer
+
+    &:before
+      content: ""
+      border-left: 3px solid transparent
+      border-right: 3px solid transparent
+      border-top: 3px solid rgba(17, 34, 62, 0.3)
+      position: absolute
+      top: 50%
+      right: -10px
+
+    &:hover
+      color: rgba(17, 34, 62, 1)
+
+    &:hover:before
+      border-top: 3px solid rgba(17, 34, 62, 1)
+
+    &.table__rating_title_top:before
+      transform: rotate(-180deg)
+
+  &__hide
+    display: none
+
+  &__hide_left-table
+    td
+      height: 250px
+      vertical-align: baseline
+      border-right: none !important
+
+    & button
+      font-size: 14px
+      line-height: 10px
+      color: #11223E
+      border: 1px solid rgba(34, 62, 105, 0.2)
+      box-sizing: border-box
+      border-radius: 5px
+      width: 175px
+      height: 32px
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 100%
+      background: none
+      margin-top: 20px
+      margin-left: 50px
+
+  &__hide_rigth-table
+    td
+      border: none !important
+
+    td:last-child
+      border-right: 1px solid rgba(17, 34, 62, 0.07) !important
+  &__img
+    opacity: 0.3
+    cursor: pointer
+    transition: 0.6s all
+    &_active
+      opacity: 1
+.open
+  display: table-row
+@import 'sprite'
+@import 'media'

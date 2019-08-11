@@ -1,0 +1,51 @@
+@media screen and (max-width: 480px)
+  .top-row
+    flex-wrap: wrap
+
+    &__left
+      margin: 10px auto
+
+    &__left-button
+      width: 100%
+
+    &__input_search input
+      margin: 0 auto
+
+    &__right
+      justify-content: center !important
+      margin: 0 auto
+
+    &__right-button-wrapper
+      margin: 10px auto
+      width: 100%
+      text-align: center
+  .second-row
+    height: auto
+    margin: 30px auto
+    padding: 15px 0
+    text-align: center
+
+    &__wrapper
+      flex-wrap: wrap
+
+    &__scale
+      margin: 0 auto 10px
+    &__result
+      line-height: 20px
+  .content-table
+    &__left
+      min-width: 295px
+  .table
+    &__name-title:after
+      right: 5px
+
+    &__star
+      right: 15px
+
+@media screen and (max-width: 375px)
+  .content-table
+    &__left
+      min-width: 235px
+  .table
+    &__rating_title:before
+      content: none
